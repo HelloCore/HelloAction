@@ -18,3 +18,6 @@ jobs:
     - run: echo $comment
       env: 
         comment: ${{ github.comment.body }}
+    - run: echo $author_association
+      env: 
+        comment: ${{ github.comment.author_association }}
