@@ -17,4 +17,4 @@ jobs:
         ref: ${{ github.ref }}
     - run: echo $test
       env: 
-        test: ${{ contain(github.event.pull_request.labels.*.name , 'ready_for_qa') }}
+        test: ${{ contains(github.event.pull_request.labels.*.name , 'ready_for_qa') }}
