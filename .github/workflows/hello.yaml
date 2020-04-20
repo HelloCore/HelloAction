@@ -12,11 +12,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - run: echo "---------"
     - run: echo $ref
       env: 
         ref: ${{ github.ref }}
     - run: echo $comment
       env: 
         comment: ${{ github.comment.body }}
-    - run: echo "---------"
