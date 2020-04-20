@@ -22,5 +22,5 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          github.issues.removeLabel({...context.issue, 'ready_for_qa' })
+          github.issues.removeLabel({...context.issue, name: 'ready_for_qa' })
             
