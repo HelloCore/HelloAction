@@ -1,0 +1,22 @@
+name: "Hello"
+on:
+  pull_request_review:
+    types: [submitted]
+  push:
+    braches:
+    - master
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - run: echo "---------"
+    - run: echo $ref
+      env: 
+        ref: ${{ github.ref }}
+    - run: echo $comment
+      env: 
+        comment: ${{ github.comment.body }}
+    - run: echo "---------"
