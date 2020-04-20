@@ -3,8 +3,7 @@ on:
   pull_request_review_comment:
     types: [created]
   push:
-    braches:
-    - master
+    braches: [master]
 
 jobs:
   hello:
